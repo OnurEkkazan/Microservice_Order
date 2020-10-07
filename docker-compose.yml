@@ -1,0 +1,42 @@
+services:
+    sqldata:
+        image: mcr.microsoft.com/mssql/server
+        # hostname: sqlserver
+        container_name: sql-server
+        ports: 
+            - 1433:1433
+        command: bash -c "chmod -R 777 /usr/src/sql/ && /usr/src/sql/entrypoint.sh"
+        environment: 
+            ACCEPT_EULA: Y
+            SA_PASSWORD: Password1*
+        volumes: 
+            - ./sql/:/usr/src/sql/
+
+    customerapi:
+        container_name: customers
+        build: 
+            context: ./Customer
+        ports: 
+            - "8000:80"
+        environment:
+            SERVERNAME: sqldata
+            DATABASE: OrderCustomer
+            PASSWORD: Password1*
+        depends_on:
+            - sqldata
+
+    orderapi:
+        container_name: orders
+        build: 
+            context: ./Order
+        ports: 
+            - "8080:80"
+        environment:
+            SERVERNAME: sqldata
+            DATABASE: OrderCustomer
+            PASSWORD: Password1*
+        depends_on:
+            - sqldata
+
+
+        
