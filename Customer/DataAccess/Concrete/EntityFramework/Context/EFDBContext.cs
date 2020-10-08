@@ -13,7 +13,7 @@ namespace DataAccess.Concrete.EntityFramework.Context
         {
             var dbServer = String.IsNullOrEmpty(Environment.GetEnvironmentVariable("SERVERNAME")) != true ? Environment.GetEnvironmentVariable("SERVERNAME") : "sqldata";
             var dbName = String.IsNullOrEmpty(Environment.GetEnvironmentVariable("DATABASE")) != true ? Environment.GetEnvironmentVariable("DATABASE") : "OrderCustomer";
-            var dbPass = String.IsNullOrEmpty(Environment.GetEnvironmentVariable("PASSWORD")) != true ? Environment.GetEnvironmentVariable("PASSWORD") : "Password1*";
+            var dbPass = String.IsNullOrEmpty(Environment.GetEnvironmentVariable("PASSWORD")) != true ? Environment.GetEnvironmentVariable("PASSWORD") : "Password1234*";
 
             optionsBuilder.UseSqlServer(@"Server=" + dbServer + ",1433;Initial Catalog=" + dbName + ";User Id=sa; Password=" + dbPass);
         }

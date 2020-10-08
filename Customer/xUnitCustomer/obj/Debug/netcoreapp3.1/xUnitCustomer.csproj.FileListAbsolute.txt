@@ -145,3 +145,4 @@ C:\Users\Onur\source\repos\MicroservicesOrder_Demo\Customer\xUnitCustomer\obj\De
 C:\Users\Onur\source\repos\MicroservicesOrder_Demo\Customer\xUnitCustomer\obj\Debug\netcoreapp3.1\xUnitCustomer.dll
 C:\Users\Onur\source\repos\MicroservicesOrder_Demo\Customer\xUnitCustomer\obj\Debug\netcoreapp3.1\xUnitCustomer.pdb
 C:\Users\Onur\source\repos\MicroservicesOrder_Demo\Customer\xUnitCustomer\obj\Debug\netcoreapp3.1\xUnitCustomer.genruntimeconfig.cache
+C:\Users\Onur\source\repos\MicroservicesOrder_Demo\Customer\xUnitCustomer\obj\Debug\netcoreapp3.1\xUnitCustomer.csproj.CoreCompileInputs.cache

@@ -10,6 +10,7 @@
         "dependencies": {
           "CustomerAPI": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.5.0",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.10.9",
           "coverlet.collector": "1.2.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"

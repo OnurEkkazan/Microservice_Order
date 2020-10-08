@@ -2,6 +2,9 @@
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
+ENV SERVERNAME=setValue
+ENV DATABASE=setValue
+ENV PASSWORD=setValue
 EXPOSE 80
 EXPOSE 443
 
