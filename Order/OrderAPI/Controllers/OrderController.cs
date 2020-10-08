@@ -58,7 +58,7 @@ namespace OrderAPI.Controllers
         }
 
         [HttpGet, Route("get")]
-        public IActionResult GetOrders([FromQuery] string userId, [FromQuery] string orderId)
+        public IActionResult GetOrders([FromQuery] string userId = null, [FromQuery] string orderId = null)
         {
             if (!String.IsNullOrEmpty(userId))
             {
@@ -87,6 +87,17 @@ namespace OrderAPI.Controllers
                 }
                 return BadRequest("Order Not Found");
             }
+        }
+
+        [HttpPut("changeStatus")]
+        public IActionResult ChangeStatusByOrderId(string orderId, string newStatus)
+        {
+            var result = this.order_Service.ChangeStatus(orderId, newStatus);
+            if (result)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
         }
     }
 }

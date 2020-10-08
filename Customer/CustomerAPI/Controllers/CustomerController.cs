@@ -21,7 +21,7 @@ namespace CustomerAPI.Controllers
         }
 
         [HttpGet("get")]
-        public IActionResult GetCustomers([FromQuery] string Id)
+        public IActionResult GetCustomers([FromQuery] string Id = null)
         {
             if (!String.IsNullOrEmpty(Id))
             {

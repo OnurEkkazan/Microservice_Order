@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "xUnitCustomer": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
